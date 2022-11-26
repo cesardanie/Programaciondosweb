@@ -11,9 +11,25 @@ build_property.RootNamespace = Aplicacion_Centros_Comerciales
 build_property.ProjectDir = C:\Users\cesar\source\repos\Proyecto\Aplicacion_Centros_Comerciales\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\cesar\source\repos\Proyecto\Aplicacion_Centros_Comerciales
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/cesar/source/repos/Proyecto/Aplicacion_Centros_Comerciales/Views/Centroscomerciales/CentrocomercialAndino.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VudHJvc2NvbWVyY2lhbGVzXENlbnRyb2NvbWVyY2lhbEFuZGluby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cesar/source/repos/Proyecto/Aplicacion_Centros_Comerciales/Views/Centroscomerciales/CentrocomercialParquelacolina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VudHJvc2NvbWVyY2lhbGVzXENlbnRyb2NvbWVyY2lhbFBhcnF1ZWxhY29saW5hLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cesar/source/repos/Proyecto/Aplicacion_Centros_Comerciales/Views/Centroscomerciales/CentrocomercialPortal80.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VudHJvc2NvbWVyY2lhbGVzXENlbnRyb2NvbWVyY2lhbFBvcnRhbDgwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cesar/source/repos/Proyecto/Aplicacion_Centros_Comerciales/Views/Formularios/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXVsYXJpb3NcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cesar/source/repos/Proyecto/Aplicacion_Centros_Comerciales/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
