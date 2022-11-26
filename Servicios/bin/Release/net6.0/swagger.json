@@ -1,0 +1,286 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Api/CentrosComerciales": {
+      "get": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Centros_Comerciales"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/Tiendas": {
+      "get": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "IdCentrocomercial",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Tiendas"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/Tienda": {
+      "get": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "IdTienda",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/Tiendas"
+            }
+          }
+        }
+      }
+    },
+    "/Api/NewUser": {
+      "post": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "NombreUsuario",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "correo",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "contraseña",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/Api/ActualizarCentrocomercial": {
+      "put": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "Nombre",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "direccion",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/Api/ActualizarPerfil": {
+      "put": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "nombre",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "correo",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "contraseña",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "/Api/EliminarCentroComercial": {
+      "delete": {
+        "tags": [
+          "Servicios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "IdCentrocomercial",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Centros_Comerciales": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "imagen": {
+          "type": "string"
+        }
+      }
+    },
+    "Tiendas": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "noLocal": {
+          "type": "string"
+        },
+        "telefono": {
+          "type": "string"
+        },
+        "horario": {
+          "type": "string"
+        },
+        "categoria": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "imagen": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
